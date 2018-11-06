@@ -1,0 +1,53 @@
+git
+
+
+1 sækja repsitory frá github: (ve
+	git clone https://github.com/drengur/hello-world . (clona í þessa möppu sem staddur er í)
+
+2. sjá allar greinar sem eru í git repo:
+	git branch -a
+
+3. Búa til nýtt branch fyrir þróun:
+	git checkout dev1
+
+4. Til að fá yfirlit yfir allar breytingar sem hafa verið gerðar á dev1:
+	git status
+
+5. Til að setja allar breytingar á "stage" status
+	git add -A
+
+6. Til að commita því sem búiið er að "stage"-a
+	git commit -m"_"
+
+7. Til að setja dev1 branchið yfir á repo:
+	git push -u origin dev1
+	git branch -a (til að fá stöðuna á remote/origin/)
+
+8. Fara yfir á master branch áður en merge-að er:
+	git checkout master
+
+9	Sækja nýjasta master frá repo áður en merge-að er:
+	git pull origin master
+	
+10.Færa breytingar frá dev1 yfir á master:
+	git merge dev1
+
+11.Færa breytingar frá master local yfir á remote repo
+	git push origin master
+
+12.Til að fá yfirlit yfir það sem búið er að merge-a við master á local
+	git branch --merged
+
+13.Til að eyða branch-i sem búið er að nota og merge-a saman við master:
+	git branch -d dev1
+
+14.Til að sjá hvaða branch eru á remote:
+	git branch -a (þarna er hægt að sjá að dev1 er til á remote síðan áðan)
+
+15.Til að eyða dev1 branch-i á remote þegar búið er að merge-a því saman við master branch:
+	git push origin --delete dev1
+
+
+
+
+
